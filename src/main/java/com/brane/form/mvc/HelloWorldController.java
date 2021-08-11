@@ -17,9 +17,26 @@ public class HelloWorldController {
 		return "helloworld-form";
 	}
 
-	//process form 1 for helloworld-form.jsp
+	//controller method for process form 1 for helloworld-form.jsp
 	@RequestMapping("/processForm")
 	public String processForm() {
+		return "helloworld";
+	}
+	
+	//controller method for process form 2 for helloworld-form.jsp
+	//Read form data and add data to the model message and show new message fromthe model.
+	//HttpServletRequest holds data from HTML form.
+	@RequestMapping("/processFormVersionTwo")
+	public String letsGetLoud(HttpServletRequest request,Model model) {
+
+		String theName=request.getParameter("studentName");
+
+		theName=theName.toUpperCase();
+
+		String result="Hi! "+theName;
+		
+		model.addAttribute("message", result);
+		
 		return "helloworld";
 	}
 	
