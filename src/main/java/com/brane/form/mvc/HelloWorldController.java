@@ -17,13 +17,13 @@ public class HelloWorldController {
 		return "helloworld-form";
 	}
 
-	//controller method for process form 1 for helloworld-form.jsp
+	//controller method for processing 1 the form for helloworld-form.jsp
 	@RequestMapping("/processForm")
 	public String processForm() {
 		return "helloworld";
 	}
 	
-	//controller method for process form 2 for helloworld-form.jsp
+	//controller method for processing 2 the form for helloworld-form.jsp
 	//Read form data (example 1) and add data to the model message and show new message from the model.
 	//HttpServletRequest object holds data from HTML form (READING FORM DATA).
 	@RequestMapping("/processFormVersionTwo")
@@ -41,7 +41,7 @@ public class HelloWorldController {
 	}
 	
 	
-	//controller method for process form 3 for helloworld-form.jsp
+	//controller method for processing 3 the form for helloworld-form.jsp
 	//Read form data (example 2) and add data to the model message and show new message from the model.
 	//@RequestParam annotation binds data automatically from HTML form (READING FORM DATA).
 	@RequestMapping("/processFormVersionThree")
