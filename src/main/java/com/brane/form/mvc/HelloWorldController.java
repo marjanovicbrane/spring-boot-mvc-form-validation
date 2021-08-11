@@ -24,10 +24,10 @@ public class HelloWorldController {
 	}
 	
 	//controller method for process form 2 for helloworld-form.jsp
-	//Read form data and add data to the model message and show new message fromthe model.
-	//HttpServletRequest holds data from HTML form.
+	//Read form data (example 1) and add data to the model message and show new message from the model.
+	//HttpServletRequest object holds data from HTML form (READING FORM DATA).
 	@RequestMapping("/processFormVersionTwo")
-	public String letsGetLoud(HttpServletRequest request,Model model) {
+	public String UpperCase(HttpServletRequest request,Model model) {
 
 		String theName=request.getParameter("studentName");
 
@@ -35,8 +35,24 @@ public class HelloWorldController {
 
 		String result="Hi! "+theName;
 		
-		model.addAttribute("message", result);
+		model.addAttribute("message1", result);
 		
+		return "helloworld";
+	}
+	
+	
+	//controller method for process form 3 for helloworld-form.jsp
+	//Read form data (example 2) and add data to the model message and show new message from the model.
+	//@RequestParam annotation binds data automatically from HTML form (READING FORM DATA).
+	@RequestMapping("/processFormVersionThree")
+	public String processFormVersionThree(@RequestParam("studentName") String theName,Model model) {
+
+		theName=theName.toUpperCase();
+
+		String result="Hey my web developer friends! "+theName;
+
+		model.addAttribute("message2", result);
+
 		return "helloworld";
 	}
 	
