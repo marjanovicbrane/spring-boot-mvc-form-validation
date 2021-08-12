@@ -17,7 +17,7 @@ First name:<form:input path="firstName" />
 Last name:<form:input path="lastName" />
 <br><br>
 
-<!-- read list of countries from a Java class -->
+<!-- read list of countries from a Java class,drop-down list -->
 Country:<form:select path="country">
 		<form:options items="${student.countryOptions}" />
 </form:select>
@@ -33,6 +33,18 @@ Country:<form:select path="country">
 -->
 
 <br><br>
+
+<!-- radio button -->
+Favorite Programming Languages:
+Java<form:radiobutton path="favoriteLanguage" value="Java" />
+Java Script<form:radiobutton path="favoriteLanguage" value="Java Script" />
+HMTL<form:radiobutton path="favoriteLanguage" value="HMTL" />
+CSS<form:radiobutton path="favoriteLanguage" value="CSS" />
+PHP<form:radiobutton path="favoriteLanguage" value="PHP" />
+C#<form:radiobutton path="favoriteLanguage" value="C#" />
+
+<br><br>
+
 <input type="submit" value="Submit" />
 
 </form:form>
