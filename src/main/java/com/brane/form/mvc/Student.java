@@ -12,10 +12,24 @@ public class Student {
 	private String firstName;
 	private String lastName;
 
+	//drop-down list
+	private String country;
 	
+	//drop-down list
+	//read list of countries from a Java class
+	//LinkedHashMap is collection of name value pairs <key, label>
+	private LinkedHashMap<String, String> countryOptions;
 	
+	//populate country options field with constructor
 	public Student() {
 		
+		countryOptions=new LinkedHashMap<>();
+
+		countryOptions.put("CUB", "Cuba");
+		countryOptions.put("USA", "United States of America");
+		countryOptions.put("SRB", "Serbia");
+		countryOptions.put("BR", "Brasil");
+		countryOptions.put("AUS", "Australia");
 	}
 
 	//getters and setters
@@ -35,5 +49,19 @@ public class Student {
 		this.lastName = lastName;
 	}
 
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	
+	//We are going to create here only getter method, so we can read country options.
+	//We don't need a setter method here, because we will not change the data, only read.
+	public LinkedHashMap<String, String> getCountryOptions() {
+		return countryOptions;
+	}
 	
 }

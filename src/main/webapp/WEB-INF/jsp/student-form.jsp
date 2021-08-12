@@ -16,7 +16,25 @@ First name:<form:input path="firstName" />
 <br><br>
 Last name:<form:input path="lastName" />
 <br><br>
+
+<!-- read list of countries from a Java class -->
+Country:<form:select path="country">
+		<form:options items="${student.countryOptions}" />
+</form:select>
+
+<!--  
+Country:<form:select path="country">
+		<form:option value="SERBIA" label="Serbia" />
+		<form:option value="America" label="USA" />
+		<form:option value="CUBA" label="Cuba" />
+		<form:option value="Brasil" label="Brasil" />
+		<form:option value="Australia" label="Australia" /> 
+		</form:select>
+-->
+
+<br><br>
 <input type="submit" value="Submit" />
+
 </form:form>
 
 </body>
