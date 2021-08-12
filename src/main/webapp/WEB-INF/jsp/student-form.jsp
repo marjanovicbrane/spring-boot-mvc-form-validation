@@ -17,7 +17,7 @@ First name:<form:input path="firstName" />
 Last name:<form:input path="lastName" />
 <br><br>
 
-<!-- read list of countries from a Java class,drop-down list -->
+<!-- drop-down list, read list of countries from a Java class -->
 Country:<form:select path="country">
 		<form:options items="${student.countryOptions}" />
 </form:select>
@@ -42,6 +42,14 @@ HMTL<form:radiobutton path="favoriteLanguage" value="HMTL" />
 CSS<form:radiobutton path="favoriteLanguage" value="CSS" />
 PHP<form:radiobutton path="favoriteLanguage" value="PHP" />
 C#<form:radiobutton path="favoriteLanguage" value="C#" />
+
+<br><br>
+
+<!-- checkbox -->
+Operating Systems:
+MS Windows<form:checkbox path="operatingSystems" value="MS Windows" />
+Linux<form:checkbox path="operatingSystems" value="Linux" />
+MAC OS<form:checkbox path="operatingSystems" value="MAC OS" />
 
 <br><br>
 

@@ -23,6 +23,11 @@ public class Student {
 	//field for radio button
 	private String favoriteLanguage;
 	
+	//field for checkbox
+	private String[] operatingSystems;
+	
+	
+	
 	//populate country options field with constructor
 	public Student() {
 		
@@ -35,6 +40,8 @@ public class Student {
 		countryOptions.put("AUS", "Australia");
 	}
 
+	
+	
 	//getters and setters
 	public String getFirstName() {
 		return firstName;
@@ -73,6 +80,14 @@ public class Student {
 
 	public void setFavoriteLanguage(String favoriteLanguage) {
 		this.favoriteLanguage = favoriteLanguage;
+	}
+
+	public String[] getOperatingSystems() {
+		return operatingSystems;
+	}
+
+	public void setOperatingSystems(String[] operatingSystems) {
+		this.operatingSystems = operatingSystems;
 	}
 	
 	
