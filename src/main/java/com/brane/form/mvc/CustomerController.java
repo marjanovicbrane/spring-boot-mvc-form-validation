@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
+
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
@@ -25,5 +26,25 @@ public class CustomerController {
 		
 		return "customer-form";
 	}
+	
+	
+		//controller method for processing the form for customer-confirmation.jsp
+		//We are going to validatethe Customer object here with annotation @Valid 
+		//and we are using BindingResult object to store results of validation into this object.
+		@RequestMapping("/processForm")
+		public String processForm(@Valid @ModelAttribute("customer") Customer theCustomer, 
+								  BindingResult theBindingResult) {
+			
+			
+			//We are using now BindingResult object to see if we had errors.
+			//If we had errors, we want to return user back to form customer-form,
+			//else if everything is fine, we want to send them to confirmation page customer-confirmation.
+			if(theBindingResult.hasErrors()) {
+				return "customer-form";
+			}
+			else {		
+			return "customer-confirmation";
+			}
+		}
 	
 }
