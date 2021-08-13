@@ -2,6 +2,7 @@ package com.brane.form.mvc;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 //ADDING VALIDATION RULES
@@ -22,6 +23,11 @@ public class Customer {
 	@Max(value=10,message="Must be less than or equal to 10")
 	private Integer freePasses;
 	
+	
+	//We are using here regular expressions.
+	//User can only enter 5 chars/digits.
+	@Pattern(regexp="^[a-y-zA-Z0-9]{5}",message="only 5 chars/digits")
+	private String postalCode;
 	
 	
 	//getters and setters
@@ -44,6 +50,12 @@ public class Customer {
 	}
 	public void setFreePasses(Integer freePasses) {
 		this.freePasses = freePasses;
+	}
+	public String getPostalCode() {
+		return postalCode;
+	}
+	public void setPostalCode(String postalCode) {
+		this.postalCode = postalCode;
 	}
 	
 }
