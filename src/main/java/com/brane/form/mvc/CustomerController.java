@@ -28,6 +28,7 @@ public class CustomerController {
 	}
 	
 	
+	
 		//controller method for processing the form for customer-confirmation.jsp
 		//We are going to validatethe Customer object here with annotation @Valid 
 		//and we are using BindingResult object to store results of validation into this object.
