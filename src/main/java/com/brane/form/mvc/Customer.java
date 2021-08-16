@@ -5,6 +5,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import com.brane.form.validation.CourseCode;
+
 //ADDING VALIDATION RULES
 public class Customer {
 
@@ -28,6 +30,11 @@ public class Customer {
 	//User can only enter 5 chars/digits.
 	@Pattern(regexp="^[a-y-zA-Z0-9]{5}",message="only 5 chars/digits")
 	private String postalCode;
+	
+	//This is our custom rule, our custom CourseCode annotation.
+	//Course code must starts with SPACEX
+	@CourseCode
+	private String courseCode;
 	
 	
 	//getters and setters
@@ -57,5 +64,10 @@ public class Customer {
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
 	}
-	
+	public String getCourseCode() {
+		return courseCode;
+	}
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
+	}
 }
