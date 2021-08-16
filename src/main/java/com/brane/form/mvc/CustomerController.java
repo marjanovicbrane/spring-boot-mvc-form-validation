@@ -58,6 +58,11 @@ public class CustomerController {
 			//Just for debugging, we are going to print out this information.
 			System.out.println("Last name: |"+theCustomer.getLastName()+"|"+"First name: |"+theCustomer.getFirstName()+"|");
 			
+			//Just for debugging, we are going to print out this BindingResult object
+			System.out.println("Binding result: "+theBindingResult);
+			
+			System.out.println("\n\n\n\n");
+			
 			//We are using now BindingResult object to see if we had errors.
 			//If we had errors, we want to return user back to form customer-form,
 			//else if everything is fine, we want to send them to confirmation page customer-confirmation.
