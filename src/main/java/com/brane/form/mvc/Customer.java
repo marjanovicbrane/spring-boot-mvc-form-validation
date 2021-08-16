@@ -32,8 +32,9 @@ public class Customer {
 	private String postalCode;
 	
 	//This is our custom rule, our custom CourseCode annotation.
-	//Course code must starts with SPACEX
-	@CourseCode
+	//If we don't enter anything it will be DEV value and message Must start with DEV by default.
+	//Course code must starts with SPACEX...
+	@CourseCode(value="SPACEX", message="Must start with SPACEX")
 	private String courseCode;
 	
 	
