@@ -31,7 +31,7 @@ Free Passes field, validates a number in range 0-10 ie. must be greater than or 
 
 Postal code field, for this field we was using regular expressions.User can only enter 5 chars/digits for example:78000.
 
-Course Code field, for this field we made our custom validation rule ie. custom java annotation @CourseCode.If we don't enter anything for parameteres of this annotation, it will be DEV value and message:Must start with DEV, by default.In this example we override this values and Course code must starts with with SPACEX.On the nect picture we will break this validation to se all error messages.
+Course Code field, for this field we made our custom validation rule ie. custom java annotation @CourseCode.If we don't enter anything for parameteres of this annotation, it will be DEV value and message:Must start with DEV, by default.In this example we override this values and Course code must starts with with SPACEX.On the next picture we will break this validation to se all error messages.
 
 ![6](https://user-images.githubusercontent.com/61464267/133889054-5824d9ce-a64c-4216-b482-d69331423097.PNG)
 
