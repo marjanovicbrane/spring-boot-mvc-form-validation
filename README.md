@@ -29,7 +29,7 @@ Last name field, can't have null value and must have min 1 char.
 
 Free Passes field, validates a number in range 0-10 ie. must be greater than or equal to zero or must be less than or equal to 10.
 
-Postal code field, for this field we was using regular expressions.User can only enter 5 chars/digits for example:78000.
+Postal code field, for this field we used regular expressions.User can only enter 5 chars/digits for example:78000.
 
 Course Code field, for this field we made our custom validation rule ie. custom java annotation @CourseCode.If we don't enter anything for parameteres of this annotation, it will be DEV value and message:Must start with DEV, by default.In this example we override this values and Course code must starts with with SPACEX.On the next picture we will break this validation to se all error messages.
 
