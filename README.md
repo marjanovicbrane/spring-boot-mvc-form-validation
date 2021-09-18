@@ -23,7 +23,7 @@ When we submit that form, on the next page we can also see all information that 
 ![5](https://user-images.githubusercontent.com/61464267/133888448-207990e0-8ef0-452f-b532-fbcb5f4da711.PNG)
 
 
-We have one more form, Customer form.This form have validation rules, because in this example we was using Hibernate Validator.We also made our custom validation rule, ie. custom java annoation.On the next picture we can see how customer form looks like.
+We have one more form, Customer form.This form have validation rules, because in this example we used Hibernate Validator.We also made our custom validation rule, ie. custom java annoation.On the next picture we can see how customer form looks like.
 
 Last name field, can't have null value and must have min 1 char.
 
